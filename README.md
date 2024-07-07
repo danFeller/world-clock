@@ -1,15 +1,14 @@
 # World Clock
 
-This app is a clock that will tell you your current time based on your location.
-
-You can also add any other location to show the current time there. It uses the Google Maps and Google Timezone API to pull out the timezone from a given location.
+This app is a clock that will tell you your current time based on the location inputted.
+It gets your longitude and latitude through Google's map api, and gets your current time and time zone using Google's Timezone api
 
 Run the app with
 ```
 bin/server
 ```
 
-In the app itself you'll see you current time based on your location
+In the app itself you can determine your current time based on the search location
 
 
 Optionally, to use `ActiveRecord` for database operations, add to the `app.rb`:
