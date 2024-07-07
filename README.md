@@ -1,6 +1,16 @@
-# sinatra-template
+# World Clock
 
-Use this repository to create new Sinatra apps. 
+This app is a clock that will tell you your current time based on your location.
+
+You can also add any other location to show the current time there. It uses the Google Maps and Google Timezone API to pull out the timezone from a given location.
+
+Run the app with
+```
+bin/server
+```
+
+In the app itself you'll see you current time based on your location
+
 
 Optionally, to use `ActiveRecord` for database operations, add to the `app.rb`:
 
