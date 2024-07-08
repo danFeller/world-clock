@@ -9,6 +9,8 @@ gem "sinatra-contrib"
 # Use Puma as the app server
 gem "puma", "~> 6.0"
 gem "http"
+gem "rack"
+gem "rackup"
 
 # use active record
 gem "sinatra-activerecord"
