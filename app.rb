@@ -4,7 +4,6 @@ require "http"
 require "json"
 require "date"
 
-
 key = ENV.fetch("GMAPS_KEY")
 
 get("/") do
@@ -12,7 +11,7 @@ get("/") do
 end
 
 get("/time") do
-  map_url = HTTP.get("https://maps.googleapis.com/maps/api/geocode/json?address=#{params.fetch("location")}&key=#{key}")
+  map_url = HTTP.get("https://maps.googleapis.com/maps/api/geocode/json?address=#{params.fetch("location").squeeze(" ").gsub(" ", "+")}&key=#{key}")
   @location_lat, @location_lng = JSON(map_url).fetch("results")[0].fetch("geometry").fetch("location").fetch("lat"), JSON(map_url).fetch("results")[0].fetch("geometry").fetch("location").fetch("lng")
   now = Time.now
   seconds = now.to_i
